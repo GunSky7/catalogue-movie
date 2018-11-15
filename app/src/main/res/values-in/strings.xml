@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Catalogue Movie</string>
+    <string name="btn_detail_watch">Tonton</string>
+
+    <string name="navigation_drawer_open">Buka navigasi</string>
+    <string name="navigation_drawer_close">Tutup navigasi</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Halo fragment kosong</string>
+    <string name="gunawan_saleh">Gunawan Saleh</string>
+    <string name="email">gunawansaleh04@gmail.com</string>
+    <string name="home">Beranda</string>
+    <string name="now_playing">Sekarang Tayang</string>
+    <string name="upcoming">Akan Tayang</string>
+    <string name="action_settings">Pengaturan</string>
+    <string name="detail">DETAIL</string>
+    <string name="share">BAGIKAN</string>
+    <string name="search_hint">Masukkan nama movie</string>
+    <string name="title_activity_settings">Pengaturan</string>
+    <string name="btn_setting_change_language">Ganti Bahasa</string>
+    <string name="title_activity_main">Katalog Film Ui Ux</string>
+</resources>

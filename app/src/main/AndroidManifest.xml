@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.devgeek.cataloguemovie">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <permission
+        android:name="com.devgeek.cataloguemovie.READ_DATABASE"
+        android:protectionLevel="normal" />
+    <permission
+        android:name="com.devgeek.cataloguemovie.WRITE_DATABASE"
+        android:protectionLevel="normal" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".activity.DetailActivity"
+            android:label="Detail"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".activity.SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:parentActivityName=".activity.MainActivity"
+            android:theme="@style/AppTheme2">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".activity.MainActivity" />
+        </activity>
+
+        <provider
+            android:name=".provider.FavouriteProvider"
+            android:authorities="com.devgeek.cataloguemovie"
+            android:exported="true"
+            android:readPermission="com.devgeek.cataloguemovie.READ_DATABASE"
+            android:writePermission="com.devgeek.cataloguemovie.WRITE_DATABASE" />
+
+        <receiver android:name=".widget.FavouriteWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/favourite_widget_info" />
+        </receiver>
+        <receiver
+            android:name=".alarmmanager.DailyReminderReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <receiver
+            android:name=".alarmmanager.ReleaseReminderReceiver"
+            android:enabled="true"
+            android:exported="true" />
+        <service android:name=".StackWidgetService"
+            android:permission="android.permission.BIND_REMOTEVIEWS" />
+    </application>
+
+</manifest>

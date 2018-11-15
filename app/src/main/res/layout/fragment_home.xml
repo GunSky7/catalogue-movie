@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    tools:context="com.devgeek.cataloguemovie.activity.MainActivity"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+
+    <SearchView
+        android:id="@+id/sv_home"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:queryHint="Search"
+        android:theme="@style/colorAccentGossip"
+        android:layout_marginBottom="@dimen/activity_vertical_margin"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_home"
+        android:layout_below="@+id/sv_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/movie_card" />
+
+    <ProgressBar
+        android:id="@+id/pb_list_movie"
+        android:theme="@style/colorAccentGossip"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_centerInParent="true"/>
+
+</RelativeLayout>

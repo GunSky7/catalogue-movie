@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.devgeek.cataloguemovie.activity.DetailActivity"
+    android:orientation="vertical"
+    tools:showIn="@layout/activity_detail">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin">
+
+            <ImageView
+                android:id="@+id/imgv_detail_poster"
+                android:layout_width="120dp"
+                android:layout_height="170dp"
+                android:paddingLeft="5dp"
+                android:paddingTop="5dp"/>
+
+            <TextView
+                android:id="@+id/tv_detail_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:paddingLeft="10dp"
+                android:paddingTop="5dp"
+                android:layout_toRightOf="@+id/imgv_detail_poster"
+                android:layout_toEndOf="@+id/imgv_detail_poster"/>
+
+            <TextView
+                android:id="@+id/tv_detail_release_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@id/imgv_detail_poster"
+                android:layout_toEndOf="@+id/imgv_detail_poster"
+                android:layout_below="@id/tv_detail_title"/>
+
+            <Button
+                android:id="@+id/btn_detail_watch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/imgv_detail_poster"
+                android:layout_toEndOf="@id/imgv_detail_poster"
+                android:layout_below="@+id/tv_detail_release_date"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/btn_detail_watch" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_detail_overview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17sp"
+            android:textAlignment="center"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"/>
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>
